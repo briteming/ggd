@@ -9,7 +9,7 @@ import { getLangugageFromPathnameWithFallback, isValidRoute } from '@/packages/l
  * - Handles language detection and routing
  * - Sets custom request headers for domain, URL, pathname, and search params
  */
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // Skip middleware for static files, API Routes and Next.js internals
