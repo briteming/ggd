@@ -1,0 +1,58 @@
+---
+title: "Beyond Basic RAG: Building Autonomous AI Agents with MCP and Graphiti"
+slug: {
+  en: "beyond-basic-rag-mcp-graphiti",
+  id: "rag-ke-agen-ai-mcp-graphiti"
+}
+date: 2026-02-24
+description: "Why traditional RAG is no longer enough and how to build autonomous agents with long-term memory using Model Context Protocol (MCP) and Graphiti."
+keywords: "RAG, AI Agents, MCP, Graphiti, Neo4j, GraphRAG, Long-term Memory"
+tags: ["ai", "rag", "mcp", "graphiti"]
+image: "/media/blog/beyond-basic-rag-mcp-graphiti/banner.png"
+---
+
+Traditional RAG (Retrieval-Augmented Generation) has served us well, but as we move towards truly autonomous AI agents, the "stateless" nature of basic vector search is becoming a bottleneck. 
+
+If you've been following my recent experiments with **Nouva**, you know I've been pushing the boundaries of what a personal AI assistant can do. The secret sauce? Moving beyond simple document retrieval into a structured, evolving memory graph.
+
+### The Problem with Basic RAG
+
+Basic RAG is like a librarian who can find any book you ask for but forgets who you are the moment you leave the library. It's great for facts, but terrible for *contextual continuity*.
+
+1. **Context Fragmentation**: Vector databases are good at finding similar snippets, but they often lose the "big picture" or the relationships between different entities.
+2. **Static Knowledge**: Updating a vector index is often a batch process, making it hard for agents to learn in real-time.
+3. **No Agency**: Simple RAG is reactive. It doesn't know *how* to use the information it finds to perform complex tasks.
+
+### Enter Model Context Protocol (MCP)
+
+The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is a game-changer. It provides a standardized way for AI models to connect to external data sources and tools.
+
+Instead of hard-coding integrations, MCP allows us to create a plug-and-play ecosystem where an agent can:
+- Query a database.
+- Read a local file system.
+- Interact with specialized APIs (like Neo4j or Slack).
+
+This turns the AI from a chatbot into an **operator**.
+
+### Graphiti: The Living Memory Graph
+
+To solve the memory problem, I've been using **Graphiti**. Unlike a flat vector store, Graphiti builds a dynamic knowledge graph (often backed by Neo4j) that evolves as the agent interacts with the world.
+
+When the agent learns something new, it doesn't just store a string of text; it creates nodes and edges. For example: `[Gading] -> (LIKES) -> [Clean Code]`.
+
+This structure allows for:
+- **Relational Reasoning**: The agent can traverse the graph to find connections you didn't explicitly mention.
+- **Temporal Awareness**: Understanding when events happened and how they relate chronologically.
+- **Dynamic Updates**: Real-time memory injection without re-indexing the entire corpus.
+
+### Why This Matters for 2026
+
+We are shifting from "AI as a tool" to "AI as a partner." A partner needs to remember your preferences, your infrastructure (like my Proxmox setup), and even your family's needs (like reminders for Kak Rina).
+
+By combining **MCP** for tool execution and **Graphiti** for structured long-term memory, we are building agents that don't just answer questions—they anticipate needs and execute complex workflows autonomously.
+
+### Closing Thoughts
+
+If you're still just building "Chat with your PDF" apps, it's time to level up. The future belongs to agents that can think, remember, and act.
+
+Stay tuned as I dive deeper into the technical implementation of this stack in the coming weeks.
