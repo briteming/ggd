@@ -28,15 +28,15 @@ Basic RAG is like a librarian who can find any book you ask for but forgets who 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is a game-changer. It provides a standardized way for AI models to connect to external data sources and tools.
 
 Instead of hard-coding integrations, MCP allows us to create a plug-and-play ecosystem where an agent can:
-- Query a database.
+- Query a knowledge graph or a specialized database.
 - Read a local file system.
-- Interact with specialized APIs (like Neo4j or Slack).
+- Interact with communication platforms (like Slack) or specialized enterprise APIs.
 
 This turns the AI from a chatbot into an **operator**.
 
 ### Graphiti: The Living Memory Graph
 
-To solve the memory problem, I've been using **Graphiti**. Unlike a flat vector store, Graphiti builds a dynamic knowledge graph (often backed by Neo4j) that evolves as the agent interacts with the world.
+To solve the memory problem, I've been using **Graphiti**. Unlike a flat vector store, Graphiti builds a dynamic knowledge graph (backed by a graph database like **Neo4j**) that evolves as the agent interacts with the world.
 
 When the agent learns something new, it doesn't just store a string of text; it creates nodes and edges. For example: `[Gading] -> (LIKES) -> [Clean Code]`.
 
