@@ -1,8 +1,8 @@
 ---
 title: "测试"
 slug: {
-  en: "fh",
-  id: "fh"
+  en: "test",
+  id: "test"
 }
 date: 2026-02-24T18:25:00
 description: "这是一篇文章"
