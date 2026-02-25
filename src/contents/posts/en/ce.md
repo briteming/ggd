@@ -1,8 +1,8 @@
 ---
 title: "稀奇古怪的中国经济"
 slug: {
-  en: "fh",
-  id: "fh"
+  en: "ce",
+  id: "ce"
 }
 date: 2026-02-24T18:23:00
 description: "这是一篇文章"
